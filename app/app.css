@@ -28,3 +28,10 @@
   content: "";
   padding: 0;
 }
+
+.center {
+    margin: auto;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
