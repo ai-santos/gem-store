@@ -33,6 +33,19 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     images: [
       'images/pentagonal-3.jpg'
       ],
+    reviews: [
+      {
+        stars: 3,
+        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+        author: "JimmyDean@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 4,
+        body: "Any gem with 12 faces is for me!",
+        author: "gemsRock@example.org",
+        createdOn: 1397490980837
+      }
+    ],
     canPurchase: true
 },
 {
@@ -40,6 +53,37 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     price: 25.95,
     description: "is a gem-quality form of hydrated amorphous silicon dioxide. Its name is derived from the Sanskrit word for 'stone'. It is gemologically classed as a mineraloid rather than a mineral, owing to its amorphous form.",
     shine: 8,
+    reviews: [
+      {
+        stars: 1,
+        body: "This gem is WAY too expensive for its rarity value.",
+        author: "turtleguyy@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 1,
+        body: "BBW: High Shine != High Quality.",
+        author: "LouisW407@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 1,
+        body: "Don't waste your rubles!",
+        author: "nat@example.org",
+        createdOn: 1397490980837
+      }
+    ],
+    reviews: [
+      {
+        stars: 3,
+        body: "I think this gem was just OK, could honestly use more shine, IMO.",
+        author: "JimmyDean@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 4,
+        body: "Any gem with 12 faces is for me!",
+        author: "gemsRock@example.org",
+        createdOn: 1397490980837
+      }
+    ],
     images: [
      'images/opal-gem.jpg'
       ],

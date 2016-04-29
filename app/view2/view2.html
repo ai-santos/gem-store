@@ -1,5 +1,14 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<!--  Review Tab's Content  -->
+<div ng-show="tab.isSet(3)">
+  <!--  Product Reviews List -->
+  <ul>
+    <h4>Reviews</h4>
+    <li>
+      <blockquote>
+        <strong>{{review.stars}} Stars</strong>
+        {{review.body}}
+        <cite class="clearfix">—{{review.author}}</cite>
+      </blockquote>
+    </li>
+  </ul>
+</div>
