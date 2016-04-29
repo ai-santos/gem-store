@@ -34,19 +34,27 @@
   <div class="list-group">
 
     <!-- Product Container -->
-    <div class="col-xs-6 col-md-4 col-md-offset-4">
+    <div class="center col-xs-6 col-md-6 col-md-offset-4">
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>{{product.name}}<em class="pull-right">{{product.price | currency}}</em></h3>
+        <img class="center" ng-src="{{product.images[0].full}}"/>
+      </div>
+
+
+      <!-- Links to Views -->
+      <ul class="menu">
+        <li><a href="#/view1">view1</a></li>
+        <li><a href="#/view2">view2</a></li>
+      </ul>
+      <h1 class="center">{{store.products.name[0]}}</h1>
+    </div>
+  </div>
   
 
 
-  <!-- Links to Views -->
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-    <li><a href="#/view3">view3</a></li>
-  </ul>
 
-    </div>
-  </div>
+
+   
 
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
