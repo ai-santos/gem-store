@@ -38,15 +38,23 @@
   </header>
 
   <!-- Products Container -->
-  <div class="list-group">
+<div class="list-group">
 
-    <!-- Product Container -->
-    <div class="center col-xs-6 col-md-6 col-md-offset-4">
-      <div class="list-group-item" ng-repeat="product in store.products">
+  <!-- Product Container -->
+  <div class="col-xs-6 col-md-6 col-md-offset-4">
+    <div class="list-group-item" ng-repeat="product in store.products">
         <h3>{{product.name}}<em class="pull-right">{{product.price | currency}}</em></h3>
-        <img class="center" ng-src="{{product.images[0].full}}"/>
-        <button type="button" class="btn btn-primary">Add To Cart</button>
+        
+      <!-- Image Gallery -->
+      <div class="gallery" ng-show="product.images.length"> 
+          <ul class="clearfix">
+            <li class="small-image thumbnail" ng-repeat="image in product.images">
+              <img ng-src="{{image}}">
+            </li>
+          </ul>
+        <button type="button" class="center btn btn-primary" ng-show="product.canPurchase">Add To Cart</button>
       </div>
+    </div> 
 
 
 
@@ -83,7 +91,7 @@
 
   <!-- Bootstrap Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  
+
   <!-- Bower Components -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
