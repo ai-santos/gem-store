@@ -122,6 +122,15 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     };
   })
 
+   app.controller('ReviewController', function(){
+    this.review = {};
+    this.addReview = function(product){
+      product.reviews.push(this.review);
+      this.review = {};
+      
+    };
+  })
+
 
 
   .config(['$routeProvider', function($routeProvider) {
