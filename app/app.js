@@ -71,7 +71,12 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
    };
  })
   
-  
+  app.controller('GalleryController', function(){
+    this.current = 0;
+    this.setCurrent = function(value){
+      this.current = value || 0;
+    };
+  })
 
 
 

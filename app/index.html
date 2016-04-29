@@ -46,14 +46,15 @@
         <h3>{{product.name}}<em class="pull-right">{{product.price | currency}}</em></h3>
         
       <!-- Image Gallery -->
-      <div class="gallery" ng-show="product.images.length"> 
+      <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
           <ul class="clearfix">
-            <li class="small-image thumbnail" ng-repeat="image in product.images">
-              <img ng-src="{{image}}">
+            <li class="center" ng-repeat="image in product.images">
+              <img ng-src="{{product.images[gallery.current]}}" />
             </li>
           </ul>
-        <div ng-view></div>
-        <button type="button" class="center btn btn-primary" ng-show="product.canPurchase">Add To Cart</button>
+          <button type="button" class="center btn btn-default" ng-show="product.canPurchase">Add To Cart</button>
+          <div ng-view></div>
+        
       </div>
     </div> 
 
