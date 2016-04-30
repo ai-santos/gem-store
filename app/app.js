@@ -8,6 +8,7 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     name: "Amethyst",
     price: 25,
     description: "is a meditative and calming stone which works in the emotional, spiritual, and physical planes to provide calm, balance, patience, and peace.",
+    shine: 8,
     images: [
       'images/Amethyst-3.jpg'
       ],
@@ -55,24 +56,6 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     shine: 8,
     reviews: [
       {
-        stars: 1,
-        body: "This gem is WAY too expensive for its rarity value.",
-        author: "turtleguyy@example.org",
-        createdOn: 1397490980837
-      }, {
-        stars: 1,
-        body: "BBW: High Shine != High Quality.",
-        author: "LouisW407@example.org",
-        createdOn: 1397490980837
-      }, {
-        stars: 1,
-        body: "Don't waste your rubles!",
-        author: "nat@example.org",
-        createdOn: 1397490980837
-      }
-    ],
-    reviews: [
-      {
         stars: 3,
         body: "I think this gem was just OK, could honestly use more shine, IMO.",
         author: "JimmyDean@example.org",
@@ -94,6 +77,24 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     price: 35.95,
     description: "has been a source of metaphysical interest for at least 2000 years. Like a crystal or gem, its facets and symmetries compel our eyes and hearts to observe life more deeply. Some have believed that the Dodecahedron represents an idealized form of Divine thought, will, or idea. ",
     shine: 8,
+    reviews: [
+      {
+        stars: 1,
+        body: "This gem is WAY too expensive for its rarity value.",
+        author: "turtleguyy@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 1,
+        body: "BBW: High Shine != High Quality.",
+        author: "LouisW407@example.org",
+        createdOn: 1397490980837
+      }, {
+        stars: 1,
+        body: "Don't waste your rubles!",
+        author: "nat@example.org",
+        createdOn: 1397490980837
+      }
+    ],
     images: [
      'images/dodecahedron-full.jpg'
       ],
@@ -131,6 +132,12 @@ var app = angular.module('gemStore', ['ngRoute','myApp.view1','myApp.view2', 'my
     };
   })
 
+   app.directive('reviewForm', function(){
+    return {
+      restrict: 'E',
+      templateUrl: "view2/review-form.html"
+    };
+   })
 
 
   .config(['$routeProvider', function($routeProvider) {
