@@ -1,5 +1,5 @@
 <!--  Review Form -->
-<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" noValidate>
+<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid &&reviewCtrl.addReview(product)" noValidate>
   <h4>Submit a Review</h4>
   <fieldset class="form-group">
     <select class="form-control" ng-model="reviewCtrl.review.stars" ng-options="stars for stars in [5,4,3,2,1]"  title="Stars" required>
